@@ -334,7 +334,10 @@ mod tests {
             id: 0,
             name: CacheString(ArrayString::try_from_str("Name1").unwrap()),
         };
-        let string = Derive3Diesel { id: 0, name: "Name1" };
+        let string = Derive3Diesel {
+            id: 0,
+            name: "Name1",
+        };
 
         let insert_array = insert_into(derives::table).values(&array);
         let insert_cache = insert_into(derives::table).values(&cache);
@@ -375,7 +378,10 @@ mod tests {
             id: 0,
             name: CacheString(ArrayString::try_from_str("Name1").unwrap()),
         };
-        let string = Derive3Diesel { id: 0, name: "Name1" };
+        let string = Derive3Diesel {
+            id: 0,
+            name: "Name1",
+        };
         let update_array = update(derives::table).set(&array);
         let update_cache = update(derives::table).set(&array);
         let update_string = update(derives::table).set(&string);

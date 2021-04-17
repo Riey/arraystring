@@ -19,6 +19,7 @@ use crate::generic::Capacity;
 ///
 /// [`capacity`]: ./struct.ArrayString.html#method.capacity
 #[derive(Clone)]
+#[repr(C)]
 pub struct ArrayString<SIZE: Capacity> {
     /// Array type corresponding to specified `SIZE`
     pub(crate) array: SIZE::Array,

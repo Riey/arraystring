@@ -222,7 +222,7 @@ mod cache_string {
     /// Newtype string that occupies 64 bytes in memory and is 64 bytes aligned (full cache line)
     ///
     /// 63 bytes of string
-    #[repr(align(64))]
+    #[repr(C, align(64))]
     #[derive(Copy, Clone, Default)]
     pub struct CacheString(pub ArrayString<typenum::U63>);
 
